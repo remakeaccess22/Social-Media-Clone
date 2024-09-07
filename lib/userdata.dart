@@ -36,4 +36,62 @@ class UserData {
       isLiked: false,
     )
   ];
+
+  List<Friend> friendList = [
+    Friend(
+      img: 'assets/Bien.jpg',
+      name: 'Bien Manalo',
+    ),
+    Friend(
+      img: 'assets/Ramiel.jpg',
+      name: 'Ramiel Rasonado',
+    ),
+    Friend(
+      img: 'assets/Donald.jpg',
+      name: 'Donald Macasampon',
+    ),
+    Friend(
+      img: 'assets/Cedric.png',
+      name: 'Cedrick Caceres',
+    ),
+    Friend(
+      img: 'assets/Renvic.jpg',
+      name: 'Renvic Emenido',
+    ),
+    Friend(
+      img: 'assets/Robert.jpg',
+      name: 'Robert Falle',
+    ),
+  ];
+
+  List<UserComment> commentList = [
+    UserComment(
+      commenterImg: 'assets/Bien.jpg',
+      commenterName: 'Bien Manalo',
+      commentTime: '3w',
+      commentContent: 'Nice one!',
+    ),
+    UserComment(
+      commenterImg: 'assets/Cedrick.jpg',
+      commenterName: 'Cedrick Caceres',
+      commentTime: '5w',
+      commentContent: 'NgekNgok!',
+    ),
+    UserComment(
+      commenterImg: 'assets/Ramiel.jpg',
+      commenterName: 'Ramiel Rasonado',
+      commentTime: '7w',
+      commentContent: 'Watahel!',
+    ),
+  ];
+
+  Account myUserAccount = Account(
+    name: 'Bien Manalo',
+    email: 'bienmanalo@gmail.com',
+    img: 'assets/Bien.jpg',
+    numFollowers: '1.5k',
+    numPosts: '2.5k',
+    numFollowing: '1.2k',
+    numFriends: '1.8k',
+  );
 }
