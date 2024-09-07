@@ -10,7 +10,7 @@ class Profileview extends StatelessWidget {
   });
 
   final UserPost userPost;
-  final UserPost userData = UserData() as UserPost;
+  final UserData userData = UserData();
 
   var nametxtStyle = const TextStyle(
     fontWeight: FontWeight.bold,
@@ -237,7 +237,7 @@ class Profileview extends StatelessWidget {
             shrinkWrap: true,
             children: userData.commentList.map((userComment) {
               return userpostdetails(userComment);
-            }).tolist(),
+            }).toList(),
           ),
         ],
       ),

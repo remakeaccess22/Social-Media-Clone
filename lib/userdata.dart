@@ -72,7 +72,7 @@ class UserData {
       commentContent: 'Nice one!',
     ),
     UserComment(
-      commenterImg: 'assets/Cedrick.jpg',
+      commenterImg: 'assets/Cedrick.png',
       commenterName: 'Cedrick Caceres',
       commentTime: '5w',
       commentContent: 'NgekNgok!',
