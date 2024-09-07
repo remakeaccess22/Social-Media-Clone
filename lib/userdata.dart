@@ -51,7 +51,7 @@ class UserData {
       name: 'Donald Macasampon',
     ),
     Friend(
-      img: 'assets/Cedric.png',
+      img: 'assets/Cedrick.png',
       name: 'Cedrick Caceres',
     ),
     Friend(

@@ -9,13 +9,15 @@ class UserPost {
   bool isLiked;
 
   UserPost({
-    this.userimg,
-    this.username,
-    this.time,
-    this.postcontent,
-    this.postimg,
-    this.numcomments,
-    this.numshare,
-    this.isLiked,
+    required this.userimg,
+    required this.username,
+    required this.time,
+    required this.postcontent,
+    required this.postimg,
+    required this.numcomments,
+    required this.numshare,
+    required this.isLiked,
   });
+
+  get commentList => null;
 }

@@ -5,9 +5,9 @@ class UserComment {
   final String commentContent;
 
   UserComment({
-    this.commenterImg,
-    this.commenterName,
-    this.commentTime,
-    this.commentContent,
-  })
+    required this.commenterImg,
+    required this.commenterName,
+    required this.commentTime,
+    required this.commentContent,
+  });
 }

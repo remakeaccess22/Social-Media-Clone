@@ -10,17 +10,17 @@ class Profileview extends StatelessWidget {
   });
 
   final UserPost userPost;
-  final UserPost userData = UserData();
+  final UserPost userData = UserData() as UserPost;
 
   var nametxtStyle = const TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 18,
   );
-  var boldtxtStyle = const TexStyle(
-    FontWeight: FontWeight.bold,
+  var boldtxtStyle = const TextStyle(
+    fontWeight: FontWeight.bold,
   );
-  var boldtxtStyle1 = const TexStyle(
-    FontWeight: FontWeight.bold,
+  var boldtxtStyle1 = const TextStyle(
+    fontWeight: FontWeight.bold,
     fontSize: 16,
   );
   Widget commentBtn(UserComment userComment) => Padding(
@@ -76,7 +76,7 @@ class Profileview extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          commenterPic(userComment),
+          commentPic(userComment),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,7 +102,7 @@ class Profileview extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               children: [
-                Text(userPost.numShare, style: boldtxtStyle),
+                Text(userPost.numshare, style: boldtxtStyle),
               ],
             ),
           ),
@@ -217,7 +217,7 @@ class Profileview extends StatelessWidget {
         backgroundColor: Colors.transparent,
         bottomOpacity: 0.0,
         elevation: 0.0,
-        leading:IconButton(
+        leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
@@ -227,62 +227,20 @@ class Profileview extends StatelessWidget {
           ),
         ),
       ),
-  body: ListView(
-    children: [
-      userline(userPost),
-      postimage(userPost),
-      buttons(userPost),
-      commenters(userPost),
-     ListView(
-      shrinkWrap: true,
-      children: userData.commentList.map((userComment){
-        return userpostdetails(userComment);
-      }).tolist(),
-     ),
-    ],
-  ),
+      body: ListView(
+        children: [
+          userline(userPost),
+          postimage(userPost),
+          buttons(userPost),
+          commenters(userPost),
+          ListView(
+            shrinkWrap: true,
+            children: userData.commentList.map((userComment) {
+              return userpostdetails(userComment);
+            }).tolist(),
+          ),
+        ],
+      ),
     );
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

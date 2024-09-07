@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smclone/friend.dart';
-import 'package:smclone/friendlist.dart';
-import 'package:smclone/infoheader.dart';
-import 'package:smclone/mainheader.dart';
+import 'friendlist.dart';
+import 'infoheader.dart';
+import 'mainheader.dart';
+import 'postslist.dart';
 import 'userdata.dart';
 
 class SocialMedia extends StatefulWidget {
@@ -14,6 +14,10 @@ class SocialMedia extends StatefulWidget {
 
 class _SocialMediaState extends State<SocialMedia> {
   UserData userData = UserData();
+  var followTxtStyle = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +28,24 @@ class _SocialMediaState extends State<SocialMedia> {
           Mainheader(userData: userData),
           Infoheader(userData: userData),
           Friendlist(userData: userData),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Row(
+              children: [
+                Text(
+                  'Posts',
+                  style: followTxtStyle,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          PostsList(userData: userData),
         ],
       ),
     );
